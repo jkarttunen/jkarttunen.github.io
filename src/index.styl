@@ -1,0 +1,21 @@
+@keyframes pulse {
+  0% { background-color: white  }
+  100% {
+    background-color: orangered
+  }
+}
+
+
+div
+
+    width: 0.5em
+    height: 0.5em
+    float: left
+
+    -webkit-animation-name: pulse
+    -webkit-animation-duration 0.1s
+    -webkit-animation-play-state paused
+    -webkit-animation-fill-mode: forwards;
+
+    &:hover
+        -webkit-animation-play-state running

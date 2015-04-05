@@ -3,30 +3,19 @@ div {
   height: 0.5em;
   float: left;
   -webkit-animation-name: pulse;
+          animation-name: pulse;
   -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
   -webkit-animation-play-state: paused;
+          animation-play-state: paused;
   -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 div:hover {
   -webkit-animation-play-state: running;
-}
-@-moz-keyframes pulse {
-  0% {
-    background-color: #fff;
-  }
-  100% {
-    background-color: #ff4500;
-  }
+          animation-play-state: running;
 }
 @-webkit-keyframes pulse {
-  0% {
-    background-color: #fff;
-  }
-  100% {
-    background-color: #ff4500;
-  }
-}
-@-o-keyframes pulse {
   0% {
     background-color: #fff;
   }

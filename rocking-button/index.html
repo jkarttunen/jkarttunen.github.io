@@ -62,11 +62,14 @@
         } );
 
         keikkuu.addEventListener( 'mousedown', function( event ) {
+            console.log(event)
+
             keikkuu.setAttribute( 'data-direction', getDirection(event, keikkuu));
             keikkuu.classList.add( 'is-down');
         } );
 
-        keikkuu.addEventListener( 'touchStart', function( event ) {
+        keikkuu.addEventListener( 'touchstart', function( event ) {
+            console.log(event)
             keikkuu.setAttribute( 'data-direction', getDirection(event, keikkuu));
             keikkuu.classList.add( 'is-down');
         } );

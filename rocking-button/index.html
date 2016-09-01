@@ -24,6 +24,10 @@
        var offset = element.getBoundingClientRect()
        var mx = event.clientX - offset.left,
            my = event.clientY - offset.top;
+           if (event.touches) {
+            mx = event.touches.item(0).clientX - offset.left,
+            my = event.touches.item(0).clientY - offset.top;
+           }
        var w = element.offsetWidth,
            h = element.offsetHeight;
 
@@ -44,7 +48,7 @@
        } );
 
        var direction = directions.shift().id;
-       console.log(direction)
+       //console.log(direction)
        return direction;
 
     }
@@ -62,14 +66,11 @@
         } );
 
         keikkuu.addEventListener( 'mousedown', function( event ) {
-            console.log(event)
-
             keikkuu.setAttribute( 'data-direction', getDirection(event, keikkuu));
             keikkuu.classList.add( 'is-down');
         } );
 
         keikkuu.addEventListener( 'touchstart', function( event ) {
-            console.log(event)
             keikkuu.setAttribute( 'data-direction', getDirection(event, keikkuu));
             keikkuu.classList.add( 'is-down');
         } );
